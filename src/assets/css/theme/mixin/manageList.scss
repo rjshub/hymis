@@ -1,0 +1,678 @@
+// 列表背景
+// 界面主体
+@mixin g__scroll {
+    #{$defaultTheme} {
+        .g__scroll {
+            background-color: $bg-color-base-default !important;
+            .iconfont {
+                opacity: 1;
+            }
+            .g__box {
+                background-color: $bg-color-base-default !important;
+                color: $bg-color-font-default;
+                .el-breadcrumb__inner {
+                    color: $bg-color-font-default;
+                }
+
+                .list-bar {
+                    .list-bar-background .large-serial-num {
+                        background-image: url("~@/assets/image/project/list-normal-light-1.png");
+                        background-repeat: no-repeat;
+                    }
+                    .list-bar-background.active .large-serial-num {
+                        background-image: url("~@/assets/image/project/list-select-1.png");
+                        background-repeat: no-repeat;
+                    }
+                    .list-bar-background .large-serial-num:before {
+                        color: $bg-color-font-default;
+                    }
+                    .list-bar-background.active .large-serial-num:before {
+                        color: white !important;
+                    }
+
+                    .list-bar-background .main-area {
+                        background-image: url("~@/assets/image/project/list-normal-light-2.png");
+                        background-repeat: repeat-x;
+                    }
+                    .list-bar-background.active .main-area {
+                        background-image: url("~@/assets/image/project/list-select-2.png");
+                        background-repeat: repeat-x;
+                    }
+                    .list-bar-background .main-area{
+                        .name,.operate>i,.customer-time {
+                            color: $bg-color-font-default;
+                        }
+                    }
+                    .list-bar-background.active .main-area{
+                        .name,.operate>i,.customer-time {
+                            color: white !important;
+                        }
+                    }
+
+                    .list-bar-background .bevel-angle {
+                        background-image: url("~@/assets/image/project/list-normal-light-3.png");
+                        background-repeat: no-repeat;
+                    }
+                      
+                    .list-bar-background.active .bevel-angle {
+                        background-image: url("~@/assets/image/project/list-select-3.png");
+                        background-repeat: no-repeat;
+                    }
+
+                    .list-bar-background {
+                        .input-box {
+                            .el-input__inner {
+                                background-color: $bg-color-base-default !important;
+                                color: $bg-color-font-default;
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+
+                .list-content {
+                    .sublist-box {
+                        .medium-item {
+                            // background-color: $bg-color-base-default !important;
+                            color: $bg-color-font-default;
+                            border-top-color: $bg-color-list-default;
+                            &.brand {
+                                background-color: $bg-color-customer-list-header-default !important;
+                            }
+                            .iconfont {
+                                color: $bg-color-font-default;
+                            }
+                            .dotted-box {
+                                border-color: rgba(51,51,51,1);
+                            }
+                        }
+                        
+                        .medium-item:hover {
+                          background-color: $bg-color-project-list-active-default !important;  /*(背景调换)项目列表展开每一条hover背景*/
+                          &.products {
+                              background-color: $bg-color-project-list-active-default !important;
+                          }
+                        }
+
+                        .more {
+                            border-top-color: $bg-color-list-default;
+                            background-color: #f0f0f0 !important;
+                            color: $bg-color-font-default;
+                        }
+
+                        .nodata {
+                            background-color: $bg-color-more-loadMore-default !important;
+                            color: $bg-color-font-default;
+                        }
+                    }
+                }
+
+                footer {
+                    color: $bg-color-font-default;
+                }
+            }
+
+            .to-top {
+                color: $bg-color-font-dark;
+            }
+        }
+    }   
+} 
+
+// 预算分配title（可能公用）
+@mixin head-fold-area {
+    #{$defaultTheme} {
+        .g__scroll {
+            .breadcrumb-wrap {
+                .el-button.is-plain {
+                    background-color: $bg-color-create-button-default;
+                    border-color: $bg-color-border-default;
+                    color: $bg-color-button-default;
+                }
+            }
+            .head-fold-area {
+                .head {
+                    .title {
+                        background-color: $bg-color-header-title-default;
+                        color: $bg-color-font-default;
+                    }
+                    .line {
+                        background-color: $bg-color-header-title-default;
+                        border-top-color: $bg-color-header-title-default;
+                    }
+                }
+
+                .content-box {
+                    // step 1
+                    .base-info {
+                        .el-form-item__label {
+                            color: $bg-color-font-default;
+                        }
+                        .el-input-group__append {
+                            background-color: $bg-color-input-append-default;
+                            border-color: $bg-color-border-default;
+                            color: $bg-color-font-default;
+                        }
+                        .crowd-box {
+                            background-color: $bg-color-tBody-default;
+                            color: $bg-color-font-default;
+                            div, span {
+                                color: $bg-color-font-default;
+                            }
+                        }
+                    }
+                    // step 2
+                    .clearfix {
+                        .head {
+                            .el-button.is-plain {
+                                background-color: $bg-color-create-button-default;
+                                border-color: $bg-color-border-default;
+                                color: $bg-color-button-default;
+                            }
+                        }
+                        .tree-wrap {
+                            .left {
+                                border-right-color: #fff;
+                            }
+                            .thead {
+                                background-color: $bg-color-tHeader-default;
+                                color: $bg-color-font-default;
+                                .el-input__inner {
+                                    background-color: $bg-color-base-default !important;
+                                    color: $bg-color-font-default;
+                                    border-color: #999 !important;
+                                    // opacity: 0.6;
+                                }
+                            }
+                            .tbody {
+                                background-color: $bg-color-tBody-default;
+                                color: $bg-color-font-default;
+                                .iconfont {
+                                    color: $bg-color-font-default;
+                                    opacity: 0.6;
+                                }
+                                .el-input__inner {
+                                    background-color: $bg-color-base-default !important;
+                                    color: $bg-color-font-default;
+                                    border-color: #999 !important;
+                                    opacity: 0.8;
+                                }
+                            }
+                        }
+                    }
+                    // step 3,step 4
+                    .el-table thead tr th {
+                        background-color: $bg-color-tHeader-default;
+                        color: $bg-color-font-default;
+                    }
+                    .el-table tr td {
+                        color: $bg-color-font-default;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 新建编辑
+@mixin create-edit {
+    #{$defaultTheme} {
+        .g__scroll {
+            .g__box {
+                .g__content {
+                    .breadcrumb-wrap {   // 面包屑
+                        .hy-breadcrumb {
+                            color: $bg-color-font-default;
+                            span, i {
+                                color: $bg-color-font-default;
+                            }
+                            span:nth-child(1) {
+                                color: $hyMis-selected-color !important;
+                            }
+                            :nth-child(2):hover {
+                                color: #42a996 !important;
+                            }
+                        }
+                        .right-btn-box {
+                            .el-button.is-plain {
+                                background-color: $bg-color-create-button-default;
+                                border-color: #000;
+                            }
+                        }
+                    }
+                    .step-box {   //步骤条
+                        background-color: $bg-color-base-default;
+                    }
+
+                    .processing-chart-area {   // 步骤内容
+                        .progress-area {
+                            // .mis-progress {
+
+                                .disabled, .enable {
+                                    border-color: $bg-color-border-default;
+                                }
+                                
+                                .progress-button  {
+                                    background-color: $bg-color-step-active-default ;
+                                    color: $bg-color-font-default;
+                                    div {
+                                        color: #000;
+                                    }
+                                    .progress-icon {
+                                        i {
+                                            font-size: 40px;
+                                            text-align: center;
+                                        }
+                                    }
+                                }
+                                .progress-button.enable {
+                                    background-color: #EFEFEF;
+                                    border-color: $bg-color-border-default;
+                                }
+                                .progress-button.disabled {
+                                    background-color: rgba(0,0,0,0.7);
+                                    border-color: $bg-color-border-default;
+                                }
+
+                                .right-top-plugin, .right-middle-plugin, .right-bottom-plugin {
+                                    background-color: $bg-color-tHeader-default !important;
+                                    color: #000;
+                                }
+
+                                .animate-area {
+                                    .complete,.enable,.active,.disabled {
+                                        .el-button.is-plain {
+                                            background-color: $bg-color-create-button-default;
+                                            border-color: $bg-color-create-button-default;
+                                            color: #fff;
+                                        }
+                                        i {
+                                            font-size: 40px;
+                                            text-align: center;
+                                        }
+                                    }
+                                }
+                            // }
+                            
+                        }
+                    }
+                    .head-fold-area {   // 预览区
+                        .content-box {
+                            .preview {
+                                .item {
+                                    .head {
+                                        .title-text {
+                                            background-color: $bg-color-base-default !important;
+                                            color: $bg-color-font-default;
+                                        }
+                                        .triangle {
+                                            border-color: $bg-color-base-default;
+                                        }
+                                    }
+                                    .body {
+                                        background-color: $bg-color-dialog-tBody-default;
+                                        .box {
+                                            background-color: $bg-color-base-default;
+                                            color: $bg-color-font-default;
+                                            .area {
+                                                color: $bg-color-button-default;
+                                            }
+                                        }
+                                        .table-head {
+                                            background-color: $bg-color-tHeader-default;
+                                            color: $bg-color-font-default;
+                                        }
+                                        .table-item {
+                                            background-color: $bg-color-dialog-tBody-default;
+                                            border-color: $bg-color-border-default;
+                                            color: $bg-color-font-default;
+                                        }
+                                        .ico {
+                                            background-color: #E1DEE2;
+                                            color: $bg-color-font-default;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    // .log-box {  //预览区历史展示
+                        .log-area {
+                            .content,.title {
+                                background-color: $bg-color-tBody-default;
+                                border-color: $bg-color-border-default;
+                                color: $bg-color-font-default;
+                            }
+                        }
+                    // }
+                    .no-data-tip {
+                        color: $bg-color-font-default;
+                    }
+                    
+                }
+            }
+        }
+    }
+    #{$darkTheme} {
+        .g__scroll {
+            .g__box {
+                .g__content {
+                    .processing-chart-area {   // 步骤内容
+                        .progress-area {
+                            .progress-button  {
+                                .progress-icon {
+                                    i {
+                                        font-size: 40px;
+                                        text-align: center;
+                                        color: $bg-color-font-dark;
+                                    }
+                                }
+                                .progress-help {
+                                    color: $bg-color-font-dark;
+                                }
+                            }
+
+                            .animate-area {
+                                .complete,.enable,.active {
+                                    i {
+                                        font-size: 40px;
+                                        text-align: center;
+                                        color: #fff;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 弹框table（涉及新建和系统管理）
+@mixin create-dialog {
+    #{$defaultTheme}~ {
+        .el-dialog__wrapper {
+            .el-dialog {
+                .el-dialog__body {
+                    .mis-dialog-main {
+                        border-color: #fff;
+                        .mis-dialog-body {
+                            .box {
+                                .head {   // 头部
+                                    // .filter-box {
+                                        .el-select {
+                                            .el-input__inner {
+                                                color: $bg-color-font-default;
+                                            }
+                                        }
+                                    // }
+                                }
+                                .small-head {
+                                    .item {
+                                        .el-form {
+                                            .el-form-item {
+                                                .el-button {
+                                                    i {
+                                                        color: $bg-color-button-default;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                .costing-allocation {  // 分量计算
+                                    .el-button.now {   
+                                        background-color: $bg-costing-allocation-active-color;
+                                        border-color: $bg-color-border-default;
+                                        color: $bg-color-button-default;
+                                    }
+                                    .el-button.next.is-disabled {
+                                        background-color: $bg-costing-allocation-active-color;
+                                    }
+                                    .cost-title {
+                                        background-color: $bg-costing-allocation-active-color;
+                                        color: $bg-color-button-default;
+                                    }
+                                    .min-inventory-discount {
+                                        color: $bg-color-create-button-default;
+                                    }
+                                    
+                                    .el-input-number {
+                                        span {
+                                            background-color: $bg-costing-allocation-active-color;
+                                            color: $bg-color-button-default;
+                                        }
+                                        .el-input__inner {
+                                            color: $bg-color-font-default;
+                                            border-color: $bg-color-border-default;
+                                        }
+                                    }
+                                    .el-upload__input {
+                                        color: $bg-color-font-default;
+                                    }
+                                }
+                                
+                                // .table-wrap,.el-form,.el-table {   // 弹框表格
+                                    .el-table {  
+                                        &.el-table--border {
+                                            border-color: $bg-color-table-border-default;
+                                        }
+                                        .el-table__header-wrapper {
+                                            background-color: $bg-color-tHeader-default !important;
+                                           
+                                            thead,tr,th,.cell {
+                                                // color: $bg-color-font-default;
+                                                color: #333;
+                                                background-color: $bg-color-tHeader-default !important;
+                                                // border-color: $bg-color-table-border-default;
+                                                border-color: #999;
+                                                
+                                                .yellow {
+                                                    color: $hyMis-remind-color;
+                                                }
+                                                .el-input__inner {
+                                                    background-color: $bg-color-base-default;
+                                                    border-color: $bg-color-border-default;
+                                                    color: $bg-color-font-default;
+                                                }
+                                                .hy-tabel-head {
+                                                    background-color: $bg-color-tHeader-default !important;
+                                                    &>i {
+                                                        color: $bg-color-font-default;
+                                                        border-color: $bg-color-font-default;
+                                                    }
+
+                                                    i.active {
+                                                        color: $hyMis-selected-color !important;
+                                                        border-color: $hyMis-selected-color !important;
+                                                    }
+                                                    .el-form-item {
+                                                        .el-input__inner {
+                                                            background-color: $bg-color-base-default !important;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            thead tr th.column-black {
+                                                background-color: $hyMis_table-mark-color;
+                                                .cell {
+                                                    background-color: $hyMis_table-mark-color;
+                                                }
+                                            }
+                                            thead tr th.hy_yellow_header {
+                                                .cell {
+                                                    span {
+                                                        color: $hyMis-remind-color ;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        .el-table__body-wrapper {
+                                            background-color: $bg-color-dialog-tBody-default ;
+                                            tbody,tr,td,.cell {
+                                                color: $bg-color-font-default;
+                                                background-color: $bg-color-dialog-tBody-default ;
+                                                transition: background-color, 0.25s;
+                                                border-color: $bg-color-table-border-default;
+                                                div {
+                                                    background-color: $bg-color-dialog-tBody-default ;
+                                                    transition: background-color, 0.25s;
+                                                }
+                                                .operate i {
+                                                    font-size: 24px !important;
+                                                }
+                                            }
+                                            tbody tr.row-black {
+                                                background-color: $bg-color-tBody-default ;
+                                                td,.cell {
+                                                    background-color: $bg-color-tBody-default ;
+                                                }
+                                            }
+                                            tbody tr td.column-black {
+                                                background-color: $hyMis_table-mark-color;
+                                                .cell {
+                                                    background-color: $hyMis_table-mark-color;
+                                                }
+                                            }
+                                            tbody tr td.hy_yellow_cell {
+                                                .cell {
+                                                    color: $hyMis-remind-color;
+                                                }
+                                            }
+                                            tbody tr td.hy_green_cell {
+                                                .cell {
+                                                    color: $hyMis-remind-color2;
+                                                }
+                                            }
+                                            .el-table__empty-block {
+                                                background-color: $bg-color-tBody-default;
+                                            }
+                                            
+                                        }
+
+                                        .el-table__fixed {    // 多级表头
+                                            .el-table__fixed-header-wrapper {
+                                                thead,tr,th,.cell {
+                                                    color: $bg-color-font-default;
+                                                    background-color: $bg-color-tHeader-default !important;
+                                                    // border-color: $bg-color-table-border-default;
+                                                    border-color: #999999;
+                                                    .el-input__inner {
+                                                        color: $bg-color-font-default;
+                                                    }
+                                                    .hy-tabel-head {
+                                                        background-color: $bg-color-tHeader-default !important;
+                                                    }
+                                                }
+                                            }
+                                            .el-table__fixed-body-wrapper {
+                                                background-color: $bg-color-dialog-tBody-default !important;
+                                                tbody,tr,td,.cell {
+                                                    // color: $bg-color-font-default;
+                                                    color: #333;
+                                                    background-color: $bg-color-dialog-tBody-default ;
+                                                    transition: background-color, 0.25s;
+                                                    border-color: $bg-color-table-border-default;
+                                                    div {
+                                                        background-color: $bg-color-dialog-tBody-default ;
+                                                        transition: background-color, 0.25s;
+                                                    }
+                                                }
+                                                tbody tr.row-black {
+                                                    background-color: $bg-color-tBody-default ;
+                                                    td,.cell {
+                                                        background-color: $bg-color-tBody-default ;
+                                                    }
+                                                }
+                                                tbody tr td.hy_yellow_cell {
+                                                    .cell {
+                                                        color: $hyMis-remind-color;
+                                                    }
+                                                }
+                                                tbody tr td.hy_green_cell {
+                                                    .cell {
+                                                        color: $hyMis-remind-color2;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .el-table--border::after, .el-table--group::after, .el-table::before {
+                                        background: #fff !important;
+                                    }
+
+                                    .el-table--enable-row-hover .el-table__body tr:hover {
+                                        td, div{
+                                            background-color: $bg-color-table-active-default !important;
+                                        } 
+                                    } 
+                                    .el-table--enable-row-transition .el-table__body tr:hover {
+                                        background-color: $bg-color-table-active-default !important;
+                                        td{
+                                            background-color: $bg-color-table-active-default !important;
+                                            .cell {
+                                                background-color: $bg-color-table-active-default !important;
+                                            }
+                                        } 
+                                    } 
+                                    .el-table--enable-row-transition .el-table__body .hover-row>td{
+                                        background-color: $bg-color-table-active-default !important;    
+                                        .cell {
+                                            background-color: $bg-color-table-active-default !important;   
+                                        }
+                                    }
+                                // }
+
+                                // 排期表
+                                .left,.right {
+                                    .title-wrap {
+                                        border-bottom-color: $bg-color-header-title-default;
+                                        .title {
+                                            background-color: $bg-color-header-title-default;
+                                            color: $bg-color-font-default;
+                                        }
+                                    }
+                                    .el-form {
+                                        .form-delete-btn {
+                                            background-color: $bg-color-input-append-default;
+                                            border-color: $bg-color-border-default;
+                                            i {
+                                                color: $bg-color-font-default;
+                                            }
+                                        }
+                                        .el-form-item {
+                                            .el-input-group__append {
+                                                background-color: $bg-color-input-append-default;
+                                                border-color: $bg-color-border-default;
+                                                color: $bg-color-font-default;
+                                            }
+                                            i {
+                                                color: $bg-color-font-default;
+                                            }
+                                        }
+                                    }
+                                }
+                                .right {
+                                    .form-box {
+                                        .el-form {
+                                            background-color: $bg-color-tBody-default;
+                                        }
+                                    }
+                                    .add-wrap {
+                                        background-color: $bg-color-tBody-default;
+                                        i {
+                                            color: $bg-color-font-default;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

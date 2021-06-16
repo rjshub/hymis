@@ -1,0 +1,99 @@
+//  媒介策略
+@mixin medium-content {
+    #{$defaultTheme} {
+        .g__box {
+            .medium-content {
+
+                .hy-font-yellow {
+                    color: $hyMis-forbidden-color;
+                }
+
+                .breadcrumb-wrap {
+                    color: $bg-color-font-default;
+                    .el-breadcrumb {
+                        :nth-child(1):hover {
+                            color: #42a996 !important;
+                        }
+                    }
+                }
+
+                .media-detail {  // 媒体设备数dashboard
+                    .title {
+                        background-color: $bg-color-base-default;
+                        border: 1px solid $bg-color-border-default;
+                        div,span {
+                            color: $bg-color-font-default;
+                        }
+                    }
+                    .chart-container {
+                        background-color: $bg-color-base-default;
+                        border: 1px solid $bg-color-border-default;
+                    }
+                }
+
+                .ratio-wrap {
+                    .sex-ratio {   // 人群性别占比
+                        background-color: $bg-color-base-default;
+                        border: 1px solid $bg-color-border-default;
+                        .name {
+                            color: $bg-color-font-default;
+                        }
+                        .img-box {
+                            color: $bg-color-font-default;
+                        }
+                    }
+                    .age-ratio {
+                        background-color: $bg-color-base-default;
+                        border: 1px solid $bg-color-border-default;
+                        .name {
+                            color: $bg-color-font-default;
+                        }
+                        .box {
+                            color: $bg-color-font-default;
+                            .el-progress-bar {
+                                .el-progress-bar__outer {
+                                    background-color: $bg-color-progress-outer-default;
+                                    .el-progress-bar__inner {
+                                        background-color: $bg-color-progress-inner-default !important;
+                                    }
+                                }
+                            }
+                            .el-progress__text {
+                                color: $bg-color-font-default;
+                            }
+                        }
+                    }
+                }
+
+                .region-wrap {  //地图
+                    color: $bg-color-font-default;
+                    .chart-container {
+                        background-color: $bg-color-base-default;
+                        border: 1px solid $bg-color-border-default;
+                        border-right-width: 0px !important;
+                    }
+                    .region-rank {
+                        background-color: $bg-color-base-default;
+                        border: 1px solid $bg-color-border-default;
+                        border-left-width: 0px !important;
+                        .box {
+                            color: $bg-color-font-default;
+                            .el-progress-bar {
+                                .el-progress-bar__outer {
+                                    background-color: $bg-color-progress-outer-default;
+                                    .el-progress-bar__inner {
+                                        background-color: $bg-color-progress-inner-default !important;
+                                    }
+                                }
+                            }
+                            .el-progress__text {
+                                color: $bg-color-font-default;
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+}

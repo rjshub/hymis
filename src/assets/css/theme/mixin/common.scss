@@ -1,0 +1,28 @@
+// 文件上传字体颜色
+@mixin upload {
+    #{$defaultTheme} {
+        .upload-text {
+            color: $hyMis_upload-text-color;
+        }
+    }
+}
+
+@mixin input {
+    #{$defaultTheme} {
+        input::-webkit-input-placeholder {
+            color: $hyMis-input-placeholder-color;
+        }
+    }
+}
+
+// @mixin login {
+    // #{$defaultTheme} {
+        // .login_scroll {
+        //     .login-form {
+        //         .error {
+        //             color: $hyMis-error-color;
+        //         }
+        //     }
+        // }
+    // }
+// }

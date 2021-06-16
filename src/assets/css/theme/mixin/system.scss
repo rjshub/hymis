@@ -1,0 +1,140 @@
+// 角色用户管理
+@mixin role-manege {
+    #{$defaultTheme} {
+        .g__content {
+            .role-content {
+                .content-body {
+                    // background-color: $bg-color-list-default;
+                    // color: ;
+                } 
+            }
+            // &.customer-content {
+            //     .content-body {
+            //         // background-color: $bg-color-list-default;
+            //     }
+            // }
+            &.rule-content {
+                .rule-base-num {
+                    .base-num-bar {
+                        .text, &>i{
+                            color: $bg-color-font-default;
+                        }
+                        .el-button.is-plain {
+                            background-color: #42a996;
+                            border-color: #42a996;
+                            i {
+                                color: $bg-color-button-default;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 角色管理编辑弹框
+@mixin role-create-dialog {
+    #{$defaultTheme}~.el-dialog__wrapper {
+        .create-edit-role{
+            .el-dialog__body {
+                .mis-dialog-main {
+                    .mis-dialog-body {
+                        .box {
+                            .auth {
+                                .auth-box {
+                                    background-color: $bg-color-tBody-default;
+                                    .auth-list {
+                                        background-color: $bg-color-tBody-default !important;
+                                        border-color: $bg-color-border-default;
+                                        .item {
+                                            background-color: $bg-color-tHeader-default !important;
+                                            border-color: $bg-color-border-default;
+                                            color: $bg-color-font-default;
+                                            &.head {
+                                                background-color: $bg-color-tBody-default !important;
+                                            }
+                                            .status {
+                                                background-color: #333736 !important;
+                                                color: #3cb298 !important;
+                                            }
+                                        }
+                                        .item.active {
+                                            background-color: $hyMis-selected-color !important;
+                                            color: $bg-color-button-default;
+                                            .status {
+                                                background-color: #333736 !important;
+                                                color: #ffcb00 !important;
+                                            }
+                                        }
+                                    }
+                                    .auth-tree {
+                                        .head {
+                                            background-color: $bg-color-tHeader-default !important;
+                                            border-color: $bg-color-border-default;
+                                        }
+                                        .customer-auth {
+                                            border-color: $bg-color-border-default;
+                                        }
+
+                                        .auth-box-tree {
+                                            .el-tree{
+                                                background-color: $bg-color-tBody-default;
+                                                color: $bg-color-font-default;
+                                                .el-tree-node:focus > .el-tree-node__content {
+                                                    color: #fff;
+                                                    background: $bg-color-tree-active-default !important;
+                                                }
+                                                .el-tree-node__content:hover {
+                                                    background-color: $bg-color-tree-active-default !important;
+                                                }
+                                                .el-tree-node__content {
+                                                    .is-current {
+                                                        background: $bg-color-tree-active-default;
+                                                    }
+                                                    
+                                                }
+                                                .el-tree-node__content {
+                                                    .is-leaf {
+                                                        color: transparent;
+                                                    }
+                                                }
+
+                                            }
+                                        }
+                                    
+                                        .auth-box-bottom {
+                                            border-color: $bg-color-border-default;
+                                            // .el-radio {
+
+                                            // }
+                                            // span {
+                                            //     color: $bg-color-font-default;
+                                            // }
+                                            .el-button.is-plain {
+                                                background-color: #fff;
+                                                color: $bg-color-font-default;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 系统管理上传icon按钮
+@mixin hy-down-load-icon {
+    #{$defaultTheme} {
+        .hy-down-load-icon {
+            border-color: rgba($color: #000000, $alpha: .6);
+            i { 
+                color: $bg-color-font-default;
+            }
+        }
+    }
+}

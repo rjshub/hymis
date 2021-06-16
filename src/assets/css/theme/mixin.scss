@@ -1,0 +1,10 @@
+@import './variable.scss';
+
+$darkTheme:'[data-theme="dark-theme"]';
+$defaultTheme:'[data-theme="default-theme"]';
+@import './mixin/elementui.scss';
+
+@import './mixin/manageList.scss';
+@import './mixin/media-cph-rank.scss';
+@import './mixin//system.scss';
+@import './mixin//common.scss';

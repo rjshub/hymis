@@ -1,0 +1,54 @@
+/*通用颜色*/
+$hyMis-hover-color: rgba(66,169,150,.4);
+$hyMis-selected-color: rgba(66,169,150,1);
+$hyMis-forbidden-color: #ff0000 !important;  // 禁用
+$hyMis-apply-color: #46A894 !important;
+$hyMis-error-color: #f56c6c !important;   // 报错
+$hyMis-remind-color: #f56c6c !important;   //提醒
+$hyMis-remind-color2: #0aecbf !important;   //提醒
+$hyMis_upload-text-color: #2d9c96 !important;   //上传
+$hyMis_table-mark-color: #c6c8cc !important;   // 表格标记列
+$hyMis-input-placeholder-color: rgba(0,0,0,1);
+
+ 
+/* default整体基色 */
+
+$bg-color-base-default:#fff;   /*主体颜色*/
+$bg-color-font-default:#000 !important;   /*字体*/
+$bg-color-button-default:#fff !important;   /*字体*/
+$bg-color-border-default:#dcdfe6 !important;    /*边框*/
+$bg-color-list-default: #f1f2f8;   /*列表*/
+$bg-color-shadow-default: rgba(0,0,0,0.3);   /*阴影*/
+$bg-color-header-title-default: #d2d2d2;   /*title背景*/
+$bg-color-input-append-default: #dcdfe6;   /*input——icon*/
+$bg-color-tHeader-default: #DBDBDB;   /*表头*//*新建右侧小图标.right-top-plugin*/
+$bg-color-customer-list-header-default: #FBF8FB;   /*客户管理品牌表头*/
+$bg-color-tBody-default: #EFEFEF;   /*表体*/
+$bg-color-dialog-tBody-default: #fff;   /*dialog表体*/
+$bg-color-table-border-default: #dcdfe6;   /*表体边框*/
+$bg-color-more-loadMore-default: #FBF8FB;   /*表体收起、加载*/
+
+$bg-color-tree-active-default: #42a996;   /*tree选中、hover*/
+$bg-color-scrollbar-default: #ababab;   /*滚动条背景*/
+$bg-color-scrollbar-hover-default: #7d7d7d;   /*滚动条active背景*/
+$bg-color-step-active-default: #CBE7E2;   /*滚动条active背景*/
+$bg-color-create-button-default: #44A992;   /*button背景*/
+// $bg-color-table-active-default: #42a996;  /*table-active*/
+// $bg-color-table-active-default: #ccc;  /*table-active*/
+$bg-color-table-active-default: #FBF8FB;  /*table-active*/
+$bg-color-progress-outer-default: #dcdfe6;  /*进度条背景整体*/
+$bg-color-progress-inner-default: #42a996;  /*进度条背景所占比例*/
+$bg-color-pagination-normal-default: rgb(226, 225, 225);  /*分页器常态颜色*/
+$bg-color-pagination-active-default: #42a996;  /*分页器当前页颜色*/
+$bg-color-picker-panel-default: #606266;  /*时间筛选器字体默认颜色*/
+$bg-color-picker-panel-active-default: rgba(66,169,150,1);  /*时间筛选器hover字体颜色*/
+$bg-color-project-list-active-default: rgba(66, 170, 148,.6);  /*项目列表、客户管理列表hover背景*/
+
+// 界面特定颜色
+$bg-costing-allocation-active-color: #42a996;  /*分量计算界面button，title颜色*/
+
+
+/* dark整体基色 */
+
+$bg-color-base-dark:#2a313a;
+$bg-color-font-dark:rgb(222, 222, 222);

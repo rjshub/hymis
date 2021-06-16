@@ -1,0 +1,752 @@
+/* el-dropdown-menu */
+// 下拉菜单
+@mixin el-dropdown-menu {
+    #{$darkTheme}~.el-dropdown-menu {
+        background-color: $bg-color-base-dark !important;
+        border: none;
+        .el-dropdown-menu__item {
+            color: $bg-color-font-dark !important;
+            .theme-select {
+                .el-input__inner {
+                    color: $bg-color-font-dark !important;
+                }
+            }
+        }
+    }
+    #{$defaultTheme}~.el-dropdown-menu{
+        border: unset;
+        .popper__arrow {
+            border-bottom-color: $bg-color-base-default !important;
+        }
+        .popper__arrow:after {
+            border-bottom-color: $bg-color-base-default !important;
+        }
+        .el-dropdown-menu__item {
+            .theme-select {
+                .el-input__inner {
+                    color: $hyMis-input-placeholder-color !important;
+                }
+            }
+        }
+    }
+}
+
+// select下拉框
+@mixin el-select-dropdown {
+    #{$darkTheme}~.el-select-dropdown.el-popper{
+        background-color: $bg-color-base-dark;
+        border: none;
+        .el-select-dropdown__item {
+            background-color: $bg-color-base-dark;
+            color: $bg-color-font-dark !important;
+        }
+        .hover {
+            background-color: $hyMis-hover-color !important;
+            color: $bg-color-font-dark;
+        }
+    }
+    #{$defaultTheme}~.el-select-dropdown.el-popper {
+        box-shadow: 0px 3px 10px 2px $bg-color-shadow-default !important;
+        .el-scrollbar {
+            box-shadow: 0px 3px 10px 2px $bg-color-shadow-default !important;
+            .el-select-group__wrap {
+                .el-select-group__title {
+                    background-color: $bg-color-tHeader-default;
+                }
+            }
+        }
+        .el-select-dropdown__item {
+            &.selected {
+                color: $bg-color-button-default;
+            }
+        }
+
+        .el-select-dropdown__list {
+            li {
+                border-color: $bg-color-border-default;
+            }
+        }
+
+        .popper__arrow {
+            border-bottom-color: $bg-color-base-default !important;
+            border-top-color: $bg-color-base-default !important;
+        }
+        .popper__arrow:after {
+            border-bottom-color: $bg-color-base-default !important;
+            border-top-color: $bg-color-base-default !important;
+        }
+    }
+}
+
+// message弹框
+@mixin el-message-box__wrapper {
+    #{$defaultTheme}~.el-message-box__wrapper {
+        .el-message-box {
+            .el-message-box__header {
+                .el-message-box__title {
+                    background-color: $bg-color-base-default;
+                    color: $bg-color-font-default;
+                }
+            }
+            .el-message-box__content {
+                background-color: $bg-color-base-default;
+                border-color: $bg-color-base-default;
+                color: $bg-color-font-default;
+            }
+            .el-message-box__btns {
+                background-color: $bg-color-base-default;
+            }
+        }
+    }
+}
+
+// dialog弹框
+@mixin el-dialog__wrapper {
+    #{$defaultTheme}~.el-dialog__wrapper {
+        .el-dialog {
+            .el-dialog__body {
+                .mis-dialog-header {
+                    color: $bg-color-font-default;
+                    .mis-dialog-title {
+                        background-color: $bg-color-base-default;
+                        border: none;
+                        color: $bg-color-font-default;
+                    }
+                    .ladder {
+                        border-top-color: $bg-color-base-default;
+                    }
+                    
+                }
+                .mis-dialog-main {
+                    background-color: $bg-color-base-default;
+                    color: $bg-color-font-default;
+                    .mis-dialog-body {
+                        background-color: $bg-color-base-default;
+                        color: $bg-color-font-default;
+                        .box {
+                            background-color: $bg-color-base-default;
+                            color: $bg-color-font-default;
+                        }
+                        // .el-tabs,.el-table,.head {
+                        .el-tabs {
+                            div,dd {
+                                background-color: $bg-color-base-default;
+                                border-color: $bg-color-border-default;
+                                color: $bg-color-font-default;
+                            }
+                            .el-tabs__nav-wrap {
+                                span {
+                                    background-color: $bg-color-pagination-normal-default;
+                                }
+                            }
+                        }
+                      
+                        span {
+                            // color: #000;
+                            &.upload-text {
+                                color: $hyMis_upload-text-color;
+                            }
+                            &.file-name {
+                                color: $bg-color-font-default;
+                            }
+                        }
+                        .detail-container {
+                            div,.text {
+                                color: $bg-color-font-default;
+                            }
+                            .hy-font-yellow {
+                                color: $hyMis-forbidden-color;
+                            }
+                            
+                        }
+
+                        .hy-tab.el-tabs--card>.el-tabs__header .el-tabs__item.is-active{
+                            background-color: #48ac9a;
+                            color: $bg-color-button-default;
+                        }
+
+                        ::-webkit-scrollbar-thumb {    // 滚动条
+                            background-color: $bg-color-scrollbar-default;
+                            outline-color: #fff;
+                            border-color: #fff;
+                        }
+                        ::-webkit-scrollbar-thumb:hover {
+                            background-color: $bg-color-scrollbar-hover-default;
+                        }
+                        ::-webkit-scrollbar-track-piece {
+                            background-color: #fff;
+                        }
+                        ::-webkit-scrollbar-corner{
+                            background-color: #fff;
+                        }
+
+                        .el-form, .project-create-form {    // 弹框表单
+                            .el-form-item {
+                                .el-form-item__label {
+                                    color: $bg-color-font-default;
+                                    opacity: 0.8;
+                                }
+                                .el-form-item__error {
+                                    color: $hyMis-error-color;
+                                }
+                                .el-input__inner,.el-range-input,.el-range-separator {
+                                    color: $bg-color-font-default;
+                                    opacity: 1;
+                                }
+                                .el-select__tags {
+                                    background: unset;
+                                }
+                                input::-webkit-input-placeholder {
+                                    color: $hyMis-input-placeholder-color;
+                                    opacity: 0.6;
+                                }
+                            }
+                        }
+
+                        .el-form-item.relation-pbs-form-item {    // 媒体管理点位新建编辑
+                            // &.relation-pbs-form-item {
+                                .el-form-item__content {
+                                    .media-relation-pbs {
+                                        .item {
+                                            border-color: $bg-color-border-default;
+                                            .head {
+                                                background-color: $bg-color-tHeader-default;
+                                            }   
+                                            .body {
+                                                background-color: $bg-color-tBody-default;
+                                                .list-item {
+                                                    .el-checkbox {
+                                                        color: $bg-color-font-default;
+                                                    }
+                                                }
+                                                .list-item:hover {
+                                                    background-color: $bg-color-table-active-default;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    
+                                    .el-input,.el-form-item__error {
+                                        background-color: $bg-color-base-default !important;
+                                    }
+                                }
+                            // }
+                        }
+
+                        .el-select {
+                            .el-input {
+                                .el-input__inner {
+                                    color: $bg-color-font-default;
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                        .clearfix {
+                            .pull-right {
+                                .el-button {
+                                    span {
+                                        color: #fff;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
+                    .mis-dialog-footer {
+                        .tip {
+                            color: $hyMis-remind-color;
+                        }
+                    }
+                }
+
+                .v-modal,.el-loading-mask{
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(255,255,255, 0.9) !important;
+                    opacity: 1;
+                    .el-loading-spinner {
+                        background-color: rgba(255,255,255, 0.9) !important;
+                    }
+                }
+
+                .table-demo {
+                    img {
+                        border: 1px solid $bg-color-border-default;
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+// popover弹出框
+@mixin el-popover {
+    #{$defaultTheme}~.el-popover {
+        background-color: $bg-color-base-default;
+        color: $bg-color-font-default;
+        .el-popover__title {
+            color: $bg-color-font-default;
+        }
+        span {   // 系统管理-操作日志-单条记录
+            color: $bg-color-font-default;
+        }
+        .menu,.version-list {
+            .item {
+                background-color: $bg-color-base-default;
+                border-color: $bg-color-border-default;
+                color: $bg-color-font-default;
+                opacity: 1;
+                &:hover {
+                    color: #fff !important;
+                    span {
+                        color: #fff !important;
+                    }
+                }
+            }
+        }
+
+        .el-table {   //  系统管理-操作日志-多条表格记录
+            .el-table__header-wrapper {
+                .el-table__header {
+                    thead,tr,th {
+                        background-color: $bg-color-tHeader-default;
+                        color: $bg-color-font-default;
+                        border-color: $bg-color-table-border-default;
+                    }
+                }
+            }
+            .el-table__body-wrapper {
+                .el-table__body {
+                    tbody,tr,td {
+                        background-color: $bg-color-dialog-tBody-default;
+                        color: $bg-color-font-default;
+                        border-color: $bg-color-table-border-default;
+                    }
+                }
+            }
+        }
+
+        .popper__arrow {
+            border-bottom-color: $bg-color-base-default !important;
+            border-top-color: $bg-color-base-default !important;
+        }
+        .popper__arrow:after {
+            border-bottom-color: $bg-color-base-default !important;
+            border-top-color: $bg-color-base-default !important;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: $bg-color-scrollbar-default;
+            outline-color: #fff;
+            border-color: #fff;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: $bg-color-scrollbar-hover-default;
+        }
+        ::-webkit-scrollbar-track-piece {
+            background-color: #fff;
+        }
+        
+        ::-webkit-scrollbar-corner{
+            background-color: #fff;
+        }
+    }
+}
+
+// select输入框
+@mixin el-select {
+    #{$defaultTheme}{
+        .g__warp {
+            .g__content{
+                .el-select {
+                    .el-input {
+                        .el-input__inner {
+                            background-color: $bg-color-base-default;
+                            color: $bg-color-font-default;
+                            border-color: $bg-color-border-default;
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 时间选择器
+@mixin el-date-editor {
+    #{$defaultTheme}{
+        .el-date-editor {
+            background-color: $bg-color-base-default;
+            color: $bg-color-font-default;
+            border-color: $bg-color-border-default;
+            .el-range-input,.el-range-separator {
+                color: $bg-color-font-default;
+            }
+            
+            input::-webkit-input-placeholder {
+                color: $hyMis-input-placeholder-color;
+            }
+        }
+    }
+}
+
+// 时间选择弹框
+@mixin el-picker-panel {
+    #{$defaultTheme}~{
+        .el-picker-panel {
+            background-color: $bg-color-base-default;
+            color: $bg-color-font-default;
+            .el-picker-panel__sidebar {
+                background-color: $bg-color-base-default;
+                border-color: $bg-color-border-default;
+                .el-picker-panel__shortcut {
+                    color: $bg-color-picker-panel-default;
+                    // color: unset;
+                }
+                .el-picker-panel__shortcut:hover {
+                    font-size: 12px;
+                    color: rgba(66,169,150,1);
+                }
+            }
+            .el-picker-panel__body {
+                .el-date-picker__header {
+                    border-color: $bg-color-border-default;
+                    span {
+                        color: $bg-color-font-default;
+                    }
+                }
+                .el-picker-panel__content {
+                    border-color: $bg-color-border-default;
+                    .el-date-table {
+                        th {
+                            border-color: $bg-color-border-default;
+                        }
+                    }
+                    .el-month-table {
+                        td {
+                            .cell {
+                                color: $bg-color-picker-panel-default;
+                            }
+                        }
+                        td.current {
+                            .cell {
+                                color: $bg-color-picker-panel-active-default !important;
+                            }
+                        }
+                        td:hover {
+                            .cell {
+                                color: $bg-color-picker-panel-active-default ;
+                            }
+                        }
+                        td.disabled:hover {
+                            .cell {
+                                color: $bg-color-picker-panel-default;
+                            }
+                        }
+                    }
+                }
+            }
+            .popper__arrow {
+                border-bottom-color: $bg-color-base-default !important;
+            }
+            .popper__arrow:after {
+                border-bottom-color: $bg-color-base-default !important;
+            }
+        }
+    }
+}
+
+// 输入框
+@mixin el-input {
+    #{$defaultTheme}{
+        .g__content{
+            .el-input {
+                .el-input__inner {
+                    background-color: $bg-color-base-default;
+                    color: $bg-color-font-default;
+                    border-color: $bg-color-border-default;
+                }
+            }
+        }
+    }
+}
+
+// 复选框
+@mixin el-checkbox {
+    #{$defaultTheme}{
+       .el-checkbox {
+            color: $bg-color-font-default;
+            .el-checkbox__label {
+                color: $bg-color-font-default;
+            }
+        } 
+    }
+}
+
+// 树型组件
+@mixin el-tree {
+    #{$defaultTheme}{
+        .el-tree{
+            background-color: $bg-color-tBody-default;
+            color: $bg-color-font-default;
+            .el-tree-node:focus > .el-tree-node__content {
+                color: #fff;
+                background: $bg-color-tree-active-default;
+            }
+            .el-tree-node__content:hover {
+                background-color: $bg-color-tree-active-default !important;
+                
+            }
+
+            .el-tree-node {
+                .el-tree-node__children {
+                    .custom-tree-node {
+                        .ico-box {
+                            .el-input__inner {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 滚动条
+@mixin scrollbar {
+    #{$defaultTheme}{
+        .g__scroll {
+            .g__content {
+                ::-webkit-scrollbar-thumb {
+                background-color: $bg-color-scrollbar-default;
+                outline-color: #fff;
+                border-color: #fff;
+                }
+
+                ::-webkit-scrollbar-thumb:hover {
+                    background-color: $bg-color-scrollbar-hover-default;
+                }
+
+                ::-webkit-scrollbar-track-piece {
+                    background-color: #fff;
+                }
+                
+                ::-webkit-scrollbar-corner{
+                    background-color: #fff;
+                }
+            }
+            
+        }
+    }
+} 
+
+// 分页器
+@mixin el-pagination {
+    #{$defaultTheme} {
+        .pagination-wrap {
+            .el-pagination li {
+                background-color: $bg-color-pagination-normal-default !important;
+                color: #303133 !important;
+            }
+
+            .el-pagination.is-background .btn-next, .el-pagination.is-background .btn-prev {
+                background-color: $bg-color-pagination-normal-default !important;
+                color: #303133 !important;
+            }
+
+            .el-pagination.is-background .el-pager li:hover {
+                color: #42a996 !important;
+              }
+
+            .el-pagination li.active {
+                background-color: $bg-color-pagination-active-default !important;
+                border: 1px solid #1bb99d;
+                color: #fff !important ;
+            }
+            .el-pagination.is-background .el-pager li.active:hover {
+                // background-color: $bg-color-pagination-active-default !important;
+                // border: 1px solid #1bb99d;
+                color: #fff !important ;
+            }
+        }
+        
+    }
+}
+
+// el-table
+@mixin el-table {
+    #{$defaultTheme} {
+        // .table-wrap {
+            .el-table {
+                &.el-table--border {
+                    border-color: $bg-color-table-border-default;
+                }
+                .el-table__header-wrapper {
+                    background-color: $bg-color-tHeader-default;
+                    transition: background-color, 0.25s;
+                    thead,tr,th,.cell {
+                        background-color: $bg-color-tHeader-default;
+                        color: $bg-color-font-default;
+                        border-color: $bg-color-table-border-default;
+                        transition: background-color, 0.25s;
+                    }
+                }
+                .el-table__body-wrapper {
+                    tbody,tr,td,.cell {
+                        // background-color: $bg-color-tBody-default;
+                        background-color: #fff;
+                        color: $bg-color-font-default;
+                        border-color: $bg-color-table-border-default;
+                        transition: background-color, 0.25s;
+                        i{
+                            color: $bg-color-font-default;
+                            
+                        }
+                        .operate i {
+                            font-size: 24px !important;
+                        }
+
+                        .el-input__inner {  //  表格内input
+                            opacity: 1;
+                        }
+
+                        .hy-font-yellow {   //禁用启用
+                            color: $hyMis-forbidden-color;
+                        }
+                        .hy-font-green {
+                            color: $hyMis-apply-color;
+                        }
+                    }
+                    .el-table__empty-block {
+                        background-color: $bg-color-tBody-default;
+                    }
+                }
+                .el-table__fixed-right {
+                    .el-table__fixed-header-wrapper {
+                        .el-table__header {
+                            thead,tr,th,.cell {
+                                background-color: $bg-color-tHeader-default;
+                                color: $bg-color-font-default;
+                                border-color: $bg-color-table-border-default;
+                                transition: background-color, 0.25s;
+                            }
+                        }
+                    }
+                    .el-table__fixed-body-wrapper {
+                        .el-table__body {
+                            background-color: $bg-color-tBody-default;
+                            tbody,tr,td {
+                                background-color: #fff;
+                                color: $bg-color-font-default;
+                                border-color: $bg-color-table-border-default;
+                                transition: background-color, 0.25s;
+                                i{
+                                    color: $bg-color-font-default;
+                                    // font-size: 24px;
+                                }
+                                .operate i {
+                                    font-size: 24px !important;
+                                    line-height: 10px !important;
+                                }
+                            }
+                        }
+
+                        .el-table__empty-block {
+                            background-color: $bg-color-tBody-default;
+                        }
+                    }
+                }
+            }
+            .el-table--border::after, .el-table--group::after, .el-table::before {
+                background: #fff !important;
+            }
+            .el-table--enable-row-hover .el-table__body tr:hover>td{
+                background-color: $bg-color-table-active-default;
+            }
+            .el-table--enable-row-transition .el-table__body tr:hover {
+                background-color: $bg-color-table-active-default !important;
+                td{
+                    background-color: $bg-color-table-active-default !important;
+                    .cell {
+                        background-color: $bg-color-table-active-default !important;
+                    }
+                } 
+            } 
+            .el-table--enable-row-transition .el-table__body .hover-row>td{
+                background-color: $bg-color-table-active-default !important;    
+                .cell {
+                    background-color: $bg-color-table-active-default !important;   
+                }
+            }
+        // }
+    }
+    #{$darkTheme} {
+        .el-table {
+            .el-table__body-wrapper,.el-table__fixed-right {
+                tbody {
+                    .operate i {
+                        font-size: 24px !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//  el-menu
+@mixin el-menu {
+    #{$defaultTheme} {
+        .g__content,.medium-content {
+            .el-menu--horizontal  {
+                background-color: $bg-color-base-default !important;
+                border-color: $bg-color-border-default;
+                .el-menu-item {
+                    background-color: $bg-color-base-default !important;
+                    color: $bg-color-font-default;
+                    &.is-active {
+                        color: $bg-color-tree-active-default !important;
+                    }   
+                }
+            }
+        }
+        
+    }
+}
+
+// loading
+@mixin el-loading {
+    #{$defaultTheme} {
+        .v-modal,.el-loading-mask{
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255,255,255, 0.9) !important;
+            opacity: 1;
+            .el-loading-spinner {
+                background-color: rgba(255,255,255, 0.9) !important;
+            }
+        }
+    }
+}
+
+
+// el-message
+@mixin el-message {
+    #{$defaultTheme}~.el-message {
+        background-color: rgba(255,255,255, 0.9) !important;
+        i,p {
+            color: $bg-color-font-default;
+        }
+    }
+}
+
+// button
+// @mixin el-button {
+//     #{$defaultTheme} {
+//         .el-button .is-plain {
+//             border-color: red;
+//         }
+//     }
+// }
